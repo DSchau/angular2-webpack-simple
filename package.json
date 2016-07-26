@@ -1,0 +1,56 @@
+{
+  "name": "angular2-webpack-simple",
+  "version": "1.0.0",
+  "description": "A simple angular2 boilerplate without much cruft",
+  "main": "dist/angular2-webpack-simple.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "webpack",
+    "clean": "rimraf dist",
+    "deploy": "npm run build -- --env.prod true",
+    "start": "webpack-dev-server --port 8001 --no-info --open",
+    "postinstall": "typings install"
+  },
+  "keywords": [
+    "angular2",
+    "webpack",
+    "boilerplate"
+  ],
+  "author": "Dustin Schau <dustinschau@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "@angular/core": "^2.0.0-rc.4",
+    "@angular/forms": "^0.2.0",
+    "@angular/http": "^2.0.0-rc.4",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
+    "@angular/router": "^3.0.0-beta.2",
+    "es6-shim": "^0.35.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "^5.0.0-beta.6",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "angular2-template-loader": "^0.4.0",
+    "awesome-typescript-loader": "^2.1.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "to-string-loader": "^1.1.4",
+    "typescript": "^2.0.0",
+    "typings": "^1.3.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.20",
+    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^0.14.1"
+  }
+}
