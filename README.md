@@ -1,6 +1,6 @@
 # angular2-webpack-simple
 
-A simple boilerplate, without much cruft, (heavily) inspired by [angular2-webpack][ang-2-webpack]
+A simple boilerplate, without much cruft, (heavily) inspired by [angular2-webpack][ang2-webpack]
 
 ## Features
 
