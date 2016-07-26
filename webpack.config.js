@@ -3,13 +3,7 @@ const merge = require('webpack-merge');
 
 module.exports = function(env) {
   'use strict';
-  let webpackConfig;
+  const webpackEnv = env && env.prod && 'prod' || 'dev';
 
-  if ( env && env.prod ) {
-    webpackConfig = require('./webpack.config.prod');
-  } else {
-    webpackConfig = require('./webpack.config.dev');
-  }
-
-  return merge.smart(require('./webpack.config.common'), webpackConfig);
+  return merge.smart(require('./webpack.config.common'), require(`./webpack.config.${webpackEnv}`));
 };
